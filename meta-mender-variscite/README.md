@@ -20,7 +20,7 @@ Download the source:
     $ repo init \
            -u https://github.com/mendersoftware/meta-mender-community \
            -m meta-mender-variscite/scripts/manifest-variscite.xml \
-           -b sumo
+           -b thud
     $ repo sync
 
 Setup environment

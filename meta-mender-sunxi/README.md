@@ -18,7 +18,7 @@ Download the source:
     $ repo init \
            -u https://github.com/mendersoftware/meta-mender-community \
            -m meta-mender-sunxi/scripts/manifest-sunxi.xml \
-           -b sumo
+           -b thud
 
 Setup environment
 

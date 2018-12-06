@@ -15,7 +15,7 @@ Download the source:
     $ repo init \
            -u https://github.com/mendersoftware/meta-mender-community \
            -m meta-mender-qemu/scripts/manifest-qemu.xml \
-           -b sumo
+           -b thud
     $ repo sync
 
 Setup environment

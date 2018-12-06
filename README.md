@@ -74,7 +74,7 @@ To use this layer:
     $ repo init \
            -u https://github.com/mendersoftware/meta-mender-community \
            -m meta-mender-<vendor/soc name>/scripts/manifest-<vendor/soc name>.xml \
-           -b sumo
+           -b thud
     $ repo sync
 ```
 
@@ -109,7 +109,7 @@ documentation](https://github.com/mendersoftware/mender/blob/master/CONTRIBUTING
 ## License
 
 Mender is licensed under the Apache License, Version 2.0. See
-[LICENSE](https://github.com/mendersoftware/meta-mender-community/blob/sumo/LICENSE) for the
+[LICENSE](https://github.com/mendersoftware/meta-mender-community/blob/thud/LICENSE) for the
 full license text.
 
 ## Connect with us
