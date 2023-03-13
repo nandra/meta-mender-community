@@ -5,6 +5,7 @@ SRC_URI_append_imx6ul-var-dart = " \
     file://0001-Integration-of-Mender-boot-code-into-U-Boot.patch \
     file://0001-Disable-CONFIG_BOOTCOMMAND-and-enable-CONFIG_MENDER_.patch \
     file://0005-fw_env_main.c-Fix-incorrect-size-for-malloc-ed-strin.patch \
+    file://0006-Fix-issue-with-dirty-config.patch \
     file://0001-Add-Mender-MTD-variables-to-config-whitelist.patch \
     file://0001-imx6ul-var-dart-Find-splash-screen-on-active-rootfs-.patch \
 "
