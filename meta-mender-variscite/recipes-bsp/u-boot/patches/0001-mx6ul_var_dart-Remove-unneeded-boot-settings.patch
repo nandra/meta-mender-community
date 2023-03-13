@@ -1,7 +1,7 @@
-From f553e136108898e90f50cd08b42da974bc4314ad Mon Sep 17 00:00:00 2001
+From 99110d8cf96229f9be71a225f35902cbd2657779 Mon Sep 17 00:00:00 2001
 From: Drew Moseley <drew.moseley@northern.tech>
 Date: Sun, 9 Dec 2018 20:35:35 +0000
-Subject: [PATCH 1/2] mx6ul_var_dart: Remove unneeded boot settings.
+Subject: [PATCH] mx6ul_var_dart: Remove unneeded boot settings.
 
 These are replaced by Mender settings. Without removing them, the
 environment is too large and cannot build.
@@ -12,10 +12,10 @@ Signed-off-by: Drew Moseley <drew.moseley@northern.tech>
  1 file changed, 2 insertions(+), 60 deletions(-)
 
 diff --git a/include/configs/mx6ul_var_dart.h b/include/configs/mx6ul_var_dart.h
-index 61acf16c30..31ae1d27ef 100644
+index d02a9e4d6b..c95df2474a 100644
 --- a/include/configs/mx6ul_var_dart.h
 +++ b/include/configs/mx6ul_var_dart.h
-@@ -72,42 +72,12 @@
+@@ -73,42 +73,12 @@
  
  
  #define MMC_BOOT_ENV_SETTINGS \
@@ -60,13 +60,13 @@ index 61acf16c30..31ae1d27ef 100644
  
  
  #ifdef CONFIG_NAND_BOOT
-@@ -160,34 +130,6 @@
+@@ -162,34 +132,6 @@
  		"setenv splashimage 0x83100000\0" \
  	"splashdisable=setenv splashfile; setenv splashimage\0" \
  	"boot_fdt=try\0" \
 -	"ip_dyn=yes\0" \
 -	"netargs=setenv bootargs console=${console},${baudrate} " \
--		"root=/dev/nfs rw ${cma_size}" \
+-		"root=/dev/nfs rw ${cma_size} " \
 -		"ip=dhcp nfsroot=${serverip}:${nfsroot},v3,tcp\0" \
 -	"netboot=echo Booting from net ...; " \
 -		"run netargs; " \
@@ -96,5 +96,5 @@ index 61acf16c30..31ae1d27ef 100644
  	"usbnet_hostaddr=f8:dc:7a:00:00:01\0" \
  	"ramsize_check="\
 -- 
-2.21.0
+2.25.1
 
