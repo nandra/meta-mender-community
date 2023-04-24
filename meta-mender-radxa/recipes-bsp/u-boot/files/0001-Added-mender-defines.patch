@@ -1,0 +1,51 @@
+From e2855df9b775fe69bf4c4171bb99f10cb98d35e8 Mon Sep 17 00:00:00 2001
+From: Marek Belisko <marek.belisko@open-nandra.com>
+Date: Tue, 18 Apr 2023 14:57:52 +0200
+Subject: [PATCH] Added mender defines
+
+Signed-off-by: Marek Belisko <marek.belisko@open-nandra.com>
+---
+ env/Kconfig                       | 4 ++--
+ include/configs/rockchip-common.h | 6 ++++++
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+
+diff --git a/env/Kconfig b/env/Kconfig
+index bc03816bc8..b711216f12 100644
+--- a/env/Kconfig
++++ b/env/Kconfig
+@@ -469,7 +469,7 @@ if ARCH_ROCKCHIP || ARCH_SUNXI || ARCH_ZYNQ || ARCH_ZYNQMP || ARCH_VERSAL || ARC
+ config ENV_OFFSET
+ 	hex "Environment Offset"
+ 	depends on (!ENV_IS_IN_UBI && !ENV_IS_NOWHERE) || ARCH_STM32MP
+-	default 0x3f8000 if ARCH_ROCKCHIP
++	default 0x3f8000 if ARCH_ROCKCHIP
+ 	default 0x88000 if ARCH_SUNXI
+ 	default 0xE0000 if ARCH_ZYNQ
+ 	default 0x1E00000 if ARCH_ZYNQMP
+@@ -484,7 +484,7 @@ config ENV_SIZE
+ 	hex "Environment Size"
+ 	default 0x40000 if ENV_IS_IN_SPI_FLASH && ARCH_ZYNQMP
+ 	default 0x20000 if ARCH_SUNXI || ARCH_ZYNQ || ARCH_OMAP2PLUS || ARCH_AT91
+-	default 0x8000 if ARCH_ROCKCHIP || ARCH_ZYNQMP || ARCH_VERSAL
++	default 0x4000 if ARCH_ROCKCHIP || ARCH_ZYNQMP || ARCH_VERSAL
+ 	default 0x4000 if ARC
+ 	default 0x1f000
+ 	help
+diff --git a/include/configs/rockchip-common.h b/include/configs/rockchip-common.h
+index 68e1105a4b..63db946220 100644
+--- a/include/configs/rockchip-common.h
++++ b/include/configs/rockchip-common.h
+@@ -59,4 +59,10 @@
+ 
+ #endif
+ 
++/*mender defines*/
++#define CONFIG_BOOTCOUNT_LIMIT
++#define CONFIG_BOOTCOUNT_ENV
++#define CONFIG_SYS_REDUNDAND_ENVIRONMENT
++
++
+ #endif /* _ROCKCHIP_COMMON_H_ */
+-- 
+2.25.1
+

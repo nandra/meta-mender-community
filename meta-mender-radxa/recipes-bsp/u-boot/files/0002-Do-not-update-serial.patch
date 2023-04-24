@@ -1,0 +1,34 @@
+From 191ac4cdd5fde3ae42929f8a3731da5546117849 Mon Sep 17 00:00:00 2001
+From: Marek Belisko <marek.belisko@open-nandra.com>
+Date: Mon, 24 Apr 2023 21:02:20 +0200
+Subject: [PATCH] sdkf
+
+Signed-off-by: Marek Belisko <marek.belisko@open-nandra.com>
+---
+ arch/arm/mach-rockchip/misc.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/arch/arm/mach-rockchip/misc.c b/arch/arm/mach-rockchip/misc.c
+index aeceae89e5..8031a90b26 100644
+--- a/arch/arm/mach-rockchip/misc.c
++++ b/arch/arm/mach-rockchip/misc.c
+@@ -20,6 +20,7 @@
+ 
+ int rockchip_setup_macaddr(void)
+ {
++	return 0;
+ #if CONFIG_IS_ENABLED(CMD_NET)
+ 	int ret;
+ 	const char *cpuid = env_get("cpuid#");
+@@ -116,7 +117,7 @@ int rockchip_cpuid_set(const u8 *cpuid, const u32 cpuid_length)
+ 	snprintf(serialno_str, sizeof(serialno_str), "%016llx", serialno);
+ 
+ 	env_set("cpuid#", cpuid_str);
+-	env_set("serial#", serialno_str);
++	//env_set("serial#", serialno_str);
+ 
+ 	return 0;
+ }
+-- 
+2.25.1
+
