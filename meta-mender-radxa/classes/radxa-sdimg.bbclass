@@ -5,7 +5,6 @@ inherit image_types
 IMAGE_CMD:gptimg:append() {
     outimgname="${IMGDEPLOYDIR}/${IMAGE_NAME}.$suffix"
     dd if=${DEPLOY_DIR_IMAGE}/idbloader.img of=${outimgname} conv=notrunc seek=64
-    dd if=${DEPLOY_DIR_IMAGE}/u-boot.img of=${outimgname} conv=notrunc seek=16384
-    dd if=${DEPLOY_DIR_IMAGE}/trust.img of=${outimgname} conv=notrunc seek=24576
+    dd if=${DEPLOY_DIR_IMAGE}/u-boot.itb of=${outimgname} conv=notrunc seek=16384
 }
 
