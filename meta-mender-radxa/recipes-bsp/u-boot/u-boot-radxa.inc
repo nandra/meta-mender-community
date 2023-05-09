@@ -9,6 +9,6 @@ RPROVIDES:${PN} += "u-boot"
 
 SRC_URI:append = " \
 	file://0001-Added-mender-defines.patch \
-	file://0002-Do-not-update-serial.patch \
 	file://boot.cmd \
 "
+
