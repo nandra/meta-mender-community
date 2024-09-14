@@ -20,4 +20,6 @@ do_deploy() {
 addtask do_deploy after do_compile before do_build
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
-COMPATIBLE_MACHINE = "(olimex-imx8mp-evb)"
+COMPATIBLE_MACHINE = "(olimex-imx8mp-evb|imx93-11x11-lpddr4x-evk)"
+
+
